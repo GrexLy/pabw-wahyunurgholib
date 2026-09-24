@@ -1,0 +1,118 @@
+<!--
+  KERANGKA AWAL — Halaman Profil Saya
+  PABW 2026/2027 · Pertemuan 3
+
+  Cara pakai:
+  1. Salin berkas ini, ganti nama menjadi profil.html
+  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
+  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
+  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
+
+  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
+  komentar itu adalah daftar periksa Anda sendiri.
+-->
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <title>Hike to Bukit Klangon</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Hike to Bukit Klangon</h1>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#direction">Direction</a></li>
+          <li><a href="#whats-happen">What's Happen?</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="direction">
+        <h2>Direction</h2>
+        <table>
+          <caption>
+            Perjalanan ke Bukit Klangon
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Kondisi</th>
+              <th scope="col">Rencana / Ekspektasi</th>
+              <th scope="col">Kenyataan</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">Sebelum berangkat</th>
+              <td>Suasana tenang dan sejuk</td>
+              <td>Ternyata hari libur dan tanggal merah sehingga ramai</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Saat trekking</th>
+              <td>Menikmati perjalanan dengan nyaman</td>
+              <td>Jalur cukup terjal dan licin</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Saat turun</th>
+              <td>Memilih jalur yang berbeda (nekat)</td>
+              <td>Salah arah dan hampir menuju ke Kali Talang, untungnya diarahkan kembali oleh warga</td>
+            </tr>
+          </tbody>
+        </table>
+        <figure>
+          <img
+            src="IMG_2021.jpg"
+            alt="FOTO DI PUNCAK KLANGON"
+            width="300"
+            height="340"
+            loading="lazy"
+          />
+          <figcaption>Puncak Klangon at 10.45 A.M</figcaption>
+        </figure>
+      </section>
+
+      <section id="whats-happen">
+        <h2>What's Happen?</h2>
+
+        <form action="/simpan" method="post">
+          <p>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+          </p>
+
+          <p>
+            <label for="tanggal">Tanggal perjalanan</label>
+            <input type="date" id="tanggal" name="tanggal" required />
+          </p>
+
+          <p>
+            <label for="rating">Rating perjalanan (1–5)</label>
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              min="1"
+              max="5"
+              required
+            />
+          </p>
+
+          <button type="submit">Simpan</button>
+        </form>
+      </section>
+    </main>
+
+    <footer id="conclusion">
+      <p>WAHYU NURGHOLIB RAZAK · 25523057 · 2026</p>
+    </footer>
+  </body>
+</html>
