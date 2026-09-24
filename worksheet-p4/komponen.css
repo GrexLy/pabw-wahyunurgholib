@@ -32,7 +32,7 @@ button {
   border: 1px solid transparent;
   border-radius: var(--radius-md);
   background: var(--color-primary);
-  color: var(--color-fg);
+  color: #353333;
   cursor: pointer;
 }
 
