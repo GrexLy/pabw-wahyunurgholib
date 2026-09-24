@@ -92,17 +92,19 @@
         <h2>What's Happen?</h2>
 
         <form action="/simpan" method="post">
-          <p>
+          <div class="form-kolom">
             <label for="nama">Nama</label>
             <input type="text" id="nama" name="nama" required />
-          </p>
+            <small class="pesan-galat">Nama wajib diisi.</small>
+          </div>
 
-          <p>
+          <div class="form-kolom">
             <label for="tanggal">Tanggal perjalanan</label>
             <input type="date" id="tanggal" name="tanggal" required />
-          </p>
+            <small class="pesan-galat"> Tanggal perjalanan wajib diisi. </small>
+          </div>
 
-          <p>
+          <div class="form-kolom">
             <label for="rating">Rating perjalanan (1–5)</label>
             <input
               type="number"
@@ -112,7 +114,10 @@
               max="5"
               required
             />
-          </p>
+            <small class="pesan-galat">
+              Rating harus diisi dengan angka 1 sampai 5.
+            </small>
+          </div>
 
           <button type="submit">Simpan</button>
         </form>
