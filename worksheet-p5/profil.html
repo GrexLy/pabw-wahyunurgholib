@@ -27,140 +27,210 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-baris">
-        <h1>Hike to Bukit Klangon</h1>
-        <nav aria-label="Navigasi utama">
-          <ul>
-            <li><a href="#direction">Direction</a></li>
-            <li><a href="#whats-happen">What's Happen?</a></li>
-            <li><a href="#conclusion">Conclusion</a></li>
-          </ul>
-          <div class="tema">
-            <input type="checkbox" id="tema" class="pengalih-tema" />
-            <label for="tema" class="tombol-tema">Tema gelap</label>
-          </div>
-        </nav>
-      </div>
-    </header>
+    <div class="page">
 
-    <main>
-      <section id="direction">
-        <h2>Direction</h2>
-        <p>
-          Bukit Klangon merupakan salah satu destinasi wisata alam di lereng
-          Gunung Merapi, Sleman, Yogyakarta.
-        </p>
-        <p>
-          Tempat ini menawarkan suasana sejuk dengan jalur trekking yang
-          dikelilingi hutan pinus serta pemandangan Gunung Merapi dari
-          ketinggian.
-        </p>
-        <p>
-          Dengan jalur yang relatif singkat, Bukit Klangon cocok untuk menikmati
-          perjalanan santai sekaligus merasakan pengalaman trekking di alam
-          terbuka.
-        </p>
-      </section>
+      <header>
+        <div class="header-baris">
+          <h1>Hike to Bukit Klangon</h1>
 
-      <section id="whats-happen">
-        <h2>What's Happen?</h2>
-        <div class="katalog">
-          <article class="kartu">
-            <h3>Sebelum berangkat</h3>
-            <p>
-              <strong>Rencana / Ekspektasi:</strong> Suasana tenang dan sejuk
-            </p>
-            <p>
-              <strong>Kenyataan:</strong> Ternyata hari libur dan tanggal merah
-              sehingga ramai
-            </p>
-          </article>
+          <nav aria-label="Navigasi utama">
+            <ul>
+              <li><a href="#direction">Direction</a></li>
+              <li><a href="#whats-happen">What's Happen?</a></li>
+              <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
 
-          <article class="kartu">
-            <h3>Saat trekking</h3>
-            <p>
-              <strong>Rencana / Ekspektasi:</strong> Menikmati perjalanan dengan
-              nyaman
-            </p>
-            <p><strong>Kenyataan:</strong> Jalur cukup terjal dan licin</p>
-          </article>
-
-          <article class="kartu">
-            <h3>Saat turun</h3>
-            <p>
-              <strong>Rencana / Ekspektasi:</strong> Memilih jalur yang berbeda
-              (nekat)
-            </p>
-            <p>
-              <strong>Kenyataan:</strong> Salah arah dan hampir menuju ke Kali
-              Talang, untungnya diarahkan kembali oleh warga
-            </p>
-          </article>
+            <div class="tema">
+              <input
+                type="checkbox"
+                id="tema"
+                class="pengalih-tema"
+              />
+              <label for="tema" class="tombol-tema">Tema gelap</label>
+            </div>
+          </nav>
         </div>
-      </section>
+      </header>
 
-      <section id="galeri">
-        <h2>Dokumentasi Perjalanan</h2>
+      <main>
 
-        <figure>
-          <img
-            src="IMG_2021.jpg"
-            alt="Pemandangan Gunung Merapi dari puncak Bukit Klangon"
-            width="300"
-            height="340"
-            loading="lazy"
-          />
-          <figcaption>Puncak Klangon at 10.45 A.M</figcaption>
-        </figure>
-      </section>
+        <section id="direction">
+          <h2>Direction</h2>
 
-      <section id="form-perjalanan">
-        <h2>Rating Perjalanan Kali ini :</h2>
+          <p>
+            Bukit Klangon merupakan salah satu destinasi wisata alam di lereng
+            Gunung Merapi, Sleman, Yogyakarta.
+          </p>
 
-        <form action="/simpan" method="post">
-          <div class="form-kolom">
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" name="nama" required />
-            <small class="pesan-galat">Nama wajib diisi.</small>
-          </div>
+          <p>
+            Tempat ini menawarkan suasana sejuk dengan jalur trekking yang
+            dikelilingi hutan pinus serta pemandangan Gunung Merapi dari
+            ketinggian.
+          </p>
 
-          <div class="form-kolom">
-            <label for="tanggal">Tanggal perjalanan</label>
-            <input type="date" id="tanggal" name="tanggal" required />
-            <small class="pesan-galat"> Tanggal perjalanan wajib diisi. </small>
-          </div>
+          <p>
+            Dengan jalur yang relatif singkat, Bukit Klangon cocok untuk
+            menikmati perjalanan santai sekaligus merasakan pengalaman trekking
+            di alam terbuka.
+          </p>
+        </section>
 
-          <div class="form-kolom">
-            <label for="rating">Rating perjalanan (1–5)</label>
-            <input
-              type="number"
-              id="rating"
-              name="rating"
-              min="1"
-              max="5"
-              required
-            />
-            <small class="pesan-galat">
-              Rating harus diisi dengan angka 1 sampai 5.
-            </small>
-          </div>
+        <div class="isi">
 
-          <button type="submit">Simpan</button>
-        </form>
-      </section>
+          <section id="galeri">
+            <h2>Dokumentasi Perjalanan</h2>
 
-      <section id="conclusion">
-        <h2>Conclusion</h2>
+            <div class="galeri-grid">
+            <figure>
+              <img
+                src="IMG_2021.jpg"
+                alt="Pemandangan Gunung Merapi dari puncak Bukit Klangon"
+                width="300"
+                height="340"
+                loading="lazy"
+              />
 
-        <p>Mungkin perjalanan kali ini tidak sesuai rencana,</p>
+              <figcaption>
+                Puncak Klangon at 10.45 A.M
+              </figcaption>
+            </figure>
+            </div>
+          </section>
 
-        <p>Tapi justru dari situlah, Semuanya menjadi lebih berharga.</p>
-      </section>
-    </main>
+          <section id="whats-happen">
+            <h2>What's Happen?</h2>
 
-    <footer id="conclusion">
-      <p>WAHYU NURGHOLIB RAZAK · 25523057 · 2026</p>
-    </footer>
+            <div class="katalog">
+
+              <article class="kartu">
+                <h3>Sebelum berangkat</h3>
+
+                <p>
+                  <strong>Rencana / Ekspektasi:</strong>
+                  Suasana tenang dan sejuk
+                </p>
+
+                <p>
+                  <strong>Kenyataan:</strong>
+                  Ternyata hari libur dan tanggal merah sehingga ramai
+                </p>
+              </article>
+
+              <article class="kartu">
+                <h3>Saat trekking</h3>
+
+                <p>
+                  <strong>Rencana / Ekspektasi:</strong>
+                  Menikmati perjalanan dengan nyaman
+                </p>
+
+                <p>
+                  <strong>Kenyataan:</strong>
+                  Jalur cukup terjal dan licin
+                </p>
+              </article>
+
+              <article class="kartu">
+                <h3>Saat turun</h3>
+
+                <p>
+                  <strong>Rencana / Ekspektasi:</strong>
+                  Memilih jalur yang berbeda (nekat)
+                </p>
+
+                <p>
+                  <strong>Kenyataan:</strong>
+                  Salah arah dan hampir menuju ke Kali Talang,
+                  untungnya diarahkan kembali oleh warga
+                </p>
+              </article>
+
+            </div>
+          </section>
+
+        </div>
+
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+
+          <p>
+            Mungkin perjalanan kali ini tidak sesuai rencana,
+          </p>
+
+          <p>
+            Tapi justru dari situlah, Semuanya menjadi lebih berharga.
+          </p>
+        </section>
+
+        <section id="form-perjalanan">
+          <h2>Rating Perjalanan Kali ini :</h2>
+
+          <form action="/simpan" method="post">
+
+            <div class="form-kolom">
+              <label for="nama">Nama</label>
+
+              <input
+                type="text"
+                id="nama"
+                name="nama"
+                required
+              />
+
+              <small class="pesan-galat">
+                Nama wajib diisi.
+              </small>
+            </div>
+
+            <div class="form-kolom">
+              <label for="tanggal">
+                Tanggal perjalanan
+              </label>
+
+              <input
+                type="date"
+                id="tanggal"
+                name="tanggal"
+                required
+              />
+
+              <small class="pesan-galat">
+                Tanggal perjalanan wajib diisi.
+              </small>
+            </div>
+
+            <div class="form-kolom">
+              <label for="rating">
+                Rating perjalanan (1–5)
+              </label>
+
+              <input
+                type="number"
+                id="rating"
+                name="rating"
+                min="1"
+                max="5"
+                required
+              />
+
+              <small class="pesan-galat">
+                Rating harus diisi dengan angka 1 sampai 5.
+              </small>
+            </div>
+
+            <button type="submit">Simpan</button>
+
+          </form>
+        </section>
+
+      </main>
+
+      <footer>
+        <p>
+          WAHYU NURGHOLIB RAZAK · 25523057 · 2026
+        </p>
+      </footer>
+
+    </div>
   </body>
 </html>
