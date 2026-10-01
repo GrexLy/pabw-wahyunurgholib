@@ -86,3 +86,11 @@ footer {
   color: var(--color-fg);
   font-size: var(--text-sm);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-block: var(--space-6);
+  padding-inline: var(--space-4);
+}
