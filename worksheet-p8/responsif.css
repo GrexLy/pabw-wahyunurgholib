@@ -1,0 +1,37 @@
+/* dasar: berlaku di semua lebar */
+
+.isi {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "galeri"
+    "kejadian";
+  gap: var(--space-4);
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* tablet: galeri dua kolom */
+
+@media (min-width: 48rem) {
+  .galeri-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: layout utama dua kolom */
+
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "galeri kejadian";
+  }
+
+  .galeri-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
