@@ -71,3 +71,8 @@ warna, jarak, sudut, bayangan, dan ukuran huruf pada halaman profil.
 Warna utama halaman harus dapat diubah hanya dengan mengubah satu baris
 token di tokens.css. Perubahan tersebut harus diterapkan pada seluruh
 elemen yang menggunakan token tersebut tanpa perlu mengubah file CSS lain.
+
+## CATATAN PENGGUNAAN AI
+
+Menggunakan AI untuk mengetes Tiga Kasus Sulit dan cara menanganinya
+(E.4 dan E.5).
