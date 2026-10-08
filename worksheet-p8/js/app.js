@@ -49,3 +49,44 @@ console.log(untukPerkenalan({
 
 console.log(formatKeahlian(["HTML", "CSS", "Java Script"]));
 console.log(formatKeahlian(["Python", "PHP", "SQL"]));
+
+const daftarProyek = [
+  {
+    judul: "Hike to Bukit Klangon",
+    tahun: 2026,
+    selesai: true
+  },
+  {
+    judul: "Portofolio Pribadi",
+    tahun: 2026,
+    selesai: true
+  },
+  {
+    judul: "MPTI - EXPO",
+    tahun: 2026,
+    selesai: false
+  }
+];
+
+console.table(daftarProyek);
+
+const judulProyek = daftarProyek.map((proyek) => proyek.judul);
+
+console.table(judulProyek);
+
+const proyekSelesai = daftarProyek.filter((proyek) => proyek.selesai);
+
+console.table(proyekSelesai);
+
+const proyekMPTI = daftarProyek.find(
+  (proyek) => proyek.judul === "MPTI - EXPO"
+);
+
+console.log(proyekMPTI);
+
+const proyekSalinan = [...daftarProyek];
+
+proyekSalinan.sort((a, b) => a.tahun - b.tahun);
+
+console.table(proyekSalinan);
+console.table(daftarProyek);
