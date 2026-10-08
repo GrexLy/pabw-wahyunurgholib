@@ -90,3 +90,4 @@ proyekSalinan.sort((a, b) => a.tahun - b.tahun);
 
 console.table(proyekSalinan);
 console.table(daftarProyek);
+
