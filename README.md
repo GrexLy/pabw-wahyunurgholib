@@ -76,3 +76,9 @@ elemen yang menggunakan token tersebut tanpa perlu mengubah file CSS lain.
 
 Menggunakan AI untuk mengetes Tiga Kasus Sulit dan cara menanganinya
 (E.4 dan E.5).
+
+## CATATAN PENGGUNAAN AI
+
+1. **Bantuan yang Diterima**:
+   - Memahami konsep dasar *DOM Manipulation*, *Event Delegation* (`event.target.closest`), dan validasi form (`preventDefault`).
+   - Menganalisis dan melacak penyebab *bug* (seperti kartu proyek yang berlipat ganda akibat wadah yang belum dikosongkan)
