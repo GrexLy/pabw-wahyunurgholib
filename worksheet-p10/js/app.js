@@ -1,4 +1,10 @@
 import { ambilProyek } from './api.js';
+import {
+  render,
+  pasangFilter,
+  aturMemuat,
+  tampilkanGalat
+} from './dom.js';
 
 const profil = {
   nama: "Wahyu Nurgholib Razak",
@@ -30,46 +36,21 @@ const formatKeahlian = (daftar) => {
 
 console.log(formatKeahlian(profil.keahlian));
 
-// Data utama yang di-export sebagai ES Module ke js/dom.js
-export const daftarProyek = [
-  {
-    judul: "Hike to Bukit Klangon",
-    tahun: 2026,
-    selesai: true,
-    kategori: "trekking"
-  },
-  {
-    judul: "Eksplorasi Hutan Pinus",
-    tahun: 2026,
-    selesai: true,
-    kategori: "trekking"
-  },
-  {
-    judul: "Camp Area Merapi View",
-    tahun: 2026,
-    selesai: false,
-    kategori: "camping"
+async function muat() {
+  aturMemuat(true);
+
+  try {
+    const daftar = await ambilProyek();
+    pasangFilter(daftar);
+    render(daftar);
+  } catch (galat) {
+    tampilkanGalat(
+      'Data gagal dimuat. Periksa koneksi, lalu muat ulang halaman.'
+    );
+    console.error(galat.message);
+  } finally {
+    aturMemuat(false);
   }
-];
+}
 
-console.table(daftarProyek);
-
-// Pengolahan array methods dari P08
-const judulProyek = daftarProyek.map((proyek) => proyek.judul);
-console.table(judulProyek);
-
-const proyekSelesai = daftarProyek.filter((proyek) => proyek.selesai);
-console.table(proyekSelesai);
-
-const proyekMPTI = daftarProyek.find(
-  (proyek) => proyek.judul === "MPTI - EXPO"
-);
-console.log(proyekMPTI);
-
-const proyekSalinan = [...daftarProyek];
-proyekSalinan.sort((a, b) => a.tahun - b.tahun);
-console.table(proyekSalinan);
-
-ambilProyek()
-  .then((daftar) => console.log(daftar))
-  .catch((galat) => console.error(galat));
+muat();
