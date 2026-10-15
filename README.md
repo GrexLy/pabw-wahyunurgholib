@@ -82,3 +82,13 @@ Menggunakan AI untuk mengetes Tiga Kasus Sulit dan cara menanganinya
 1. **Bantuan yang Diterima**:
    - Memahami konsep dasar *DOM Manipulation*, *Event Delegation* (`event.target.closest`), dan validasi form (`preventDefault`).
    - Menganalisis dan melacak penyebab *bug* (seperti kartu proyek yang berlipat ganda akibat wadah yang belum dikosongkan)
+
+
+   ASDGADGDAG
+
+   ADSGADG
+   AD
+   VGSADGASD
+   SDGS
+   AGD
+   GA
