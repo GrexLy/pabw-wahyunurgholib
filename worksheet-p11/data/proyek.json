@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": 1,
+    "judul": "Hike to Bukit Klangon",
+    "tahun": 2026,
+    "kategori": "trekking"
+  },
+  {
+    "id": 2,
+    "judul": "Eksplorasi Hutan Pinus",
+    "tahun": 2026,
+    "kategori": "trekking"
+  },
+  {
+    "id": 3,
+    "judul": "Camp Area Merapi View",
+    "tahun": 2026,
+    "kategori": "camping"
+  }
+]
