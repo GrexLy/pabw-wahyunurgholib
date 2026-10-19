@@ -4,7 +4,7 @@ import {
   aturMemuat,
   tampilkanGalat
 } from './dom.js';
-import { isiProyek } from './state.js';
+import {state, isiProyek } from './state.js';
 import { pasangPendengar } from './events.js';
 
 async function mulai() {
