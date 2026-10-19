@@ -83,12 +83,6 @@ Menggunakan AI untuk mengetes Tiga Kasus Sulit dan cara menanganinya
    - Memahami konsep dasar *DOM Manipulation*, *Event Delegation* (`event.target.closest`), dan validasi form (`preventDefault`).
    - Menganalisis dan melacak penyebab *bug* (seperti kartu proyek yang berlipat ganda akibat wadah yang belum dikosongkan)
 
+## CATATAN PENGGUNAAN AI
 
-   ASDGADGDAG
-
-   ADSGADG
-   AD
-   VGSADGASD
-   SDGS
-   AGD
-   GA
+Dalam pengerjaan worksheet PABW Pertemuan 11, saya menggunakan ChatGPT sebagai alat bantu untuk memahami konsep modularisasi JavaScript, pengelolaan state, penggunaan localStorage, serta proses debugging.
