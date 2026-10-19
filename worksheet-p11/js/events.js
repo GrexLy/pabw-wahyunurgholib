@@ -1,5 +1,9 @@
 
-import { pilihKategori, tambahFavorit } from './state.js';
+import {
+  pilihKategori,
+  tambahFavorit,
+  aturUlang
+} from './state.js';
 
 export function pasangPendengar() {
   // Event klik tombol filter kategori
@@ -9,8 +13,20 @@ export function pasangPendengar() {
     const tombol = event.target.closest('button');
     if (!tombol) return;
 
+    // Pastikan yang diklik adalah tombol kategori
+    if (!tombol.dataset.kategori) return;
+
     pilihKategori(tombol.dataset.kategori);
   });
+
+  // Event klik tombol Atur Ulang
+  const tombolAturUlang = document.querySelector('#atur-ulang');
+
+  if (tombolAturUlang) {
+    tombolAturUlang.addEventListener('click', () => {
+      aturUlang();
+    });
+  }
 
   // Event klik tombol favorit
   const wadahDaftar = document.querySelector('#daftar');
@@ -23,7 +39,9 @@ export function pasangPendengar() {
   });
 
   // Event validasi form
-  const formPerjalanan = document.querySelector('#form-perjalanan form');
+  const formPerjalanan = document.querySelector(
+    '#form-perjalanan form'
+  );
 
   formPerjalanan.addEventListener('submit', (event) => {
     event.preventDefault();

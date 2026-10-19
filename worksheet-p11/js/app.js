@@ -4,11 +4,19 @@ import {
   aturMemuat,
   tampilkanGalat
 } from './dom.js';
-import {state, isiProyek } from './state.js';
+import {
+  isiProyek,
+  muat,
+  pulihkan
+} from './state.js';
 import { pasangPendengar } from './events.js';
 
 async function mulai() {
   pasangPendengar();
+
+  // Memulihkan kategori dan favorit yang tersimpan
+  pulihkan(muat());
+
   aturMemuat(true);
 
   try {
