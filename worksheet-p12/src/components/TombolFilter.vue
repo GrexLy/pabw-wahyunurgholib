@@ -1,14 +1,31 @@
 <script setup>
-// State dan aksi tombol filter akan diaktifkan penuh di Lembar E
+import { state, pilihKategori, aturUlang } from '../state.js'
 </script>
 
 <template>
   <div id="filter">
     <div>
-      <button data-kategori="semua" class="aktif">Semua</button>
-      <button data-kategori="trekking">Trekking</button>
-      <button data-kategori="camping">Camping</button>
-      <button id="atur-ulang">Atur ulang</button>
+      <button
+        :class="{ aktif: state.kategoriAktif === 'semua' }"
+        @click="pilihKategori('semua')"
+      >
+        Semua
+      </button>
+      <button
+        :class="{ aktif: state.kategoriAktif === 'trekking' }"
+        @click="pilihKategori('trekking')"
+      >
+        Trekking
+      </button>
+      <button
+        :class="{ aktif: state.kategoriAktif === 'camping' }"
+        @click="pilihKategori('camping')"
+      >
+        Camping
+      </button>
+      <button id="atur-ulang" @click="aturUlang">
+        Atur ulang
+      </button>
     </div>
   </div>
 </template>

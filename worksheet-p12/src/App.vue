@@ -1,6 +1,8 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive, onMounted, watch } from 'vue'
 import { profil, buatPerkenalan, formatKeahlian } from './data.js'
+import { state, simpan, muat, pulihkan, isiProyek } from './state.js'
+import { ambilProyek } from './api.js'
 
 import KepalaProfil from './components/KepalaProfil.vue'
 import TombolFilter from './components/TombolFilter.vue'
@@ -8,6 +10,19 @@ import DaftarProyek from './components/DaftarProyek.vue'
 import FormKontak from './components/FormKontak.vue'
 
 const dataProfil = reactive(profil)
+
+onMounted(async () => {
+  pulihkan(muat()) // pilihan terakhir dari localStorage
+  try {
+    isiProyek(await ambilProyek()) // panggil api.js
+  } catch (galat) {
+    state.galat = 'Data gagal dimuat. Periksa koneksi, lalu muat ulang.'
+  } finally {
+    state.memuat = false
+  }
+})
+
+watch(state, (nilai) => simpan(nilai), { deep: true })
 </script>
 
 <template>
@@ -71,5 +86,5 @@ const dataProfil = reactive(profil)
 </template>
 
 <style>
-/* Kosong: seluruh berkas CSS sudah diimpor secara global di main.js */
+/* CSS diimpor di main.js */
 </style>

@@ -1,19 +1,40 @@
 <script setup>
-// Logika pengambilan data JSON dan perulangan kartu akan dihubungkan di Lembar E
+import { computed } from 'vue'
+import { state, tambahFavorit } from '../state.js'
+import { saring } from '../data.js'
+
+const tampil = computed(() => {
+  return saring(state.daftarProyek, state.kategoriAktif)
+})
 </script>
 
 <template>
   <section id="whats-happen">
     <h2>What's Happen?</h2>
 
-    <!-- Wadah tombol filter bisa dipasang berdampingan atau di atasnya -->
+    <!-- Slot untuk TombolFilter -->
     <slot></slot>
 
-    <p id="pesan-kosong" hidden>Tidak ada catatan pada kategori ini</p>
-    <p id="muat" hidden>Memuat data...</p>
+    <!-- Penanganan empat keadaan P10 -->
+    <p id="muat" v-if="state.memuat">Memuat data...</p>
+    <p id="pesan-kosong" v-else-if="state.galat">{{ state.galat }}</p>
+    <p id="pesan-kosong" v-else-if="tampil.length === 0">Belum ada data.</p>
 
-    <div class="katalog" id="daftar">
-      <!-- Kartu katalog akan dirender secara dinamis di Lembar E -->
+    <!-- Wadah kartu katalog -->
+    <div class="katalog" id="daftar" v-else>
+      <article class="kartu" v-for="proyek in tampil" :key="proyek.id">
+        <h3>{{ proyek.judul }}</h3>
+        <p>Tahun: {{ proyek.tahun }}</p>
+        <p>Kategori: {{ proyek.kategori }}</p>
+        <button
+          class="favorit"
+          :data-id="proyek.id"
+          aria-label="Tandai favorit"
+          @click="tambahFavorit(proyek.id)"
+        >
+          {{ state.favorit.includes(proyek.id) ? '★' : '☆' }}
+        </button>
+      </article>
     </div>
   </section>
 </template>
